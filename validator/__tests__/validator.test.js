@@ -1,7 +1,7 @@
 'use strict';
 
 const faker = require('faker');
-const validator = require('../lib/validator.js');
+const Validator = require('../lib/validator.js');
 
 let str = 'yes';
 let num = 1;
@@ -18,6 +18,8 @@ const schema = {
     children: { type: 'array', valueType: 'string' },
   },
 };
+
+const validator = new Validator(schema);
 
 describe('Validator module performs basic validation of', () => {
 
@@ -118,7 +120,7 @@ describe('Validator module evaluates a basic schema', () => {
       }
     }
 
-    expect(validator.isValid(schema, testRecord)).toBeTruthy();
+    expect(validator.isValid(testRecord)).toBeTruthy();
   });
 
   it('isValid() returns undefined on type mismatch', () => {
