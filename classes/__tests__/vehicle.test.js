@@ -50,7 +50,7 @@ describe('Vehicles', () => {
         case 'Constructor':
           return new VehicleConstructor.Motorcycle('foo');
         case 'Class':
-          return new VehicleClass.Car('foo');
+          return new VehicleClass.Motorcycle('foo');
         default:
           return {};
       }

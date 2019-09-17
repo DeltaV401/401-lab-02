@@ -16,16 +16,16 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
-  wheels = 4;
   constructor(name) {
     super(name);
+    this.wheels = 4;
   }
 }
 
 class Motorcycle extends Vehicle {
-  wheels = 2;
   constructor(name) {
     super(name);
+    this.wheels = 2;
   }
 
   wheelie() {
