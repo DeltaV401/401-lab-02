@@ -16,16 +16,16 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
-  constructor(name, wheels) {
+  wheels = 4;
+  constructor(name) {
     super(name);
-    wheels;
   }
 }
 
 class Motorcycle extends Vehicle {
-  constructor(name, wheels) {
+  wheels = 2;
+  constructor(name) {
     super(name);
-    wheels;
   }
 
   wheelie() {
