@@ -9,7 +9,7 @@ class Validator {
    * @param rules
    * @returns {boolean}
    */
-  isValid = (input, rules) => {
+  isValid = () => {
     return true;
   };
 
@@ -65,17 +65,17 @@ class Validator {
 
       let field = schema.fields[fieldName];
 
-      // Am I required and set?
+    // Am I required and set?
       let required = field.required
         ? isTruthy(data[fieldName])
         : true;
 
-      // Am I the right type (if we even care)
+    // Am I the right type (if we even care)
       let type = field.type
         ? isCorrectType(data[fieldName], field)
         : true;
 
-      // If anything is false ...
+    // If anything is false ...
       if (!(required && type)) {
         valid = false;
       }
