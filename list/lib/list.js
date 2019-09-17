@@ -6,9 +6,7 @@ class List {
     this.data = {};
   }
 
-  /**
-   * 
-   */
+  // I could not figure out reindex. I got confused. :)
   reindex() {
     let data = Object.keys(this.data).sort().reduce((acc,val,idx) => {
       acc[idx] = this.data[val];
@@ -43,6 +41,7 @@ class List {
     return item;
   }
 
+  // I don't know what reindex does so I don't know what this does.
   shift() {
     if ( ! this.data[0] ) { return undefined; }
     let item = this.data[0];
@@ -51,6 +50,7 @@ class List {
     return item;
   }
 
+  // I don't know what reindex does so I don't know what this does.
   unshift(item) {
     this.data[-1] = item;
     this.reindex();
